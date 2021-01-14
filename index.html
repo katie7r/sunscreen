@@ -1,0 +1,59 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Sunscreen</title>
+  <meta name="description" content="Put some sunshine in your screen">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☀️</text></svg>">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☀️</text></svg>">
+
+  <!--
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  -->
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #F6EBA2;
+      font-family: monospace;
+    }
+
+    div {
+      margin: 1em;
+      opacity: 0.5;
+    }
+
+    label {
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div>
+    <input type="color" id="color" name="color" value="#F6EBA2">
+    <label for="color">#F6EBA2</label>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.querySelector('#color').addEventListener('change', function() {
+        document.querySelector('body').style.backgroundColor = this.value;
+        document.querySelector('label').innerHTML = this.value;
+      });
+    });
+  </script>
+</body>
+
+</html>
